@@ -1,7 +1,7 @@
 <script>
+	import { onMount } from "svelte";
 	import ToDoControls from "./ToDoControls.svelte";
 	import ToDoItem from "./ToDoItem.svelte";
-        import { onMount } from "svelte";
     
     let items = [];
     let id = 0;
@@ -53,7 +53,7 @@
             <ToDoItem
             id={item.id}
             text={item.text}
-            bind:isDone={item.isDone}
+            isDone={item.isDone}
             on:change={onChangeStatus}
             on:remove={onDeleteItem}/>
         {/each}

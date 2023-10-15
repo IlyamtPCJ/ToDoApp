@@ -9,9 +9,7 @@
 
 
 <div class="todo-item" class:todo-item_done={isDone}>
-    <input class="todo-item_check" type="checkbox" on:change={dispatch('change', {id})}
-    checked={isDone}
-    />
+    <input class="todo-item_check" type="checkbox" on:change={dispatch('change', {id})} checked={isDone}/>
     <span class="todo-item_text">{text}</span>
     <button class="todo-item_btn" on:click={dispatch('remove', {id})}>Del</button>
 </div>
@@ -40,7 +38,7 @@
     .todo-item_btn {
         border: none;
         border-radius: 10px;
-        background-color: chocolate;
+        background-color: rgb(213, 55, 55);
         padding: 10px;
         min-width: 100px;
     }
